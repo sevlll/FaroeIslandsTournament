@@ -38,6 +38,7 @@ def teamShift(scheduleTable, team1, team2, tour):
         else:
             scheduleTable[team1Opponent][tour] = -team2Opponent
             scheduleTable[team2Opponent][tour] = team1Opponent
+    return scheduleTable
 
 
 def scheduleScore(scheduleTable, distanceTable):
