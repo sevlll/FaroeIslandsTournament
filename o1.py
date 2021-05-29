@@ -43,9 +43,9 @@ def teamShift(scheduleTable, team1, team2, tour):
 
 def scheduleScore(scheduleTable, distanceTable):
     # the lower score -- the better schedule
+    sumTravel = 0
     for team in range(1, N + 1):
         teamPlace = team
-        sumTravel = 0
         for tour in range(1, N + 1):
             if scheduleTable[team][tour] > 0:
                 host = team  # match in home
@@ -53,6 +53,8 @@ def scheduleScore(scheduleTable, distanceTable):
                 host = -scheduleTable[team][tour]  # match not in home
             sumTravel += distanceTable[teamPlace][host]
             teamPlace = host
+    return sumTravel
+
 
 
 def scheduleByPermutation(P):
