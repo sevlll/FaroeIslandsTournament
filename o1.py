@@ -46,7 +46,7 @@ def scheduleScore(scheduleTable, distanceTable):
     sumTravel = 0
     for team in range(1, N + 1):
         teamPlace = team
-        for tour in range(1, N + 1):
+        for tour in range(1, N):
             if scheduleTable[team][tour] > 0:
                 host = team  # match in home
             else:
