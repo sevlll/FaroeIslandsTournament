@@ -4,7 +4,7 @@ N = 10  # N is number of teams
 
 
 def homeSwap(scheduleTable, team1, team2):
-    for tour in range(1, N + 1):
+    for tour in range(1, N):
         if abs(scheduleTable[team1][tour]) == team2:
             scheduleTable[team1][tour] *= -1
             scheduleTable[team2][tour] *= -1
@@ -13,7 +13,7 @@ def homeSwap(scheduleTable, team1, team2):
 
 
 def teamSwap(scheduleTable, team1, team2):
-    for tour in range(1, N + 1):
+    for tour in range(1, N):
         if abs(scheduleTable[team1][tour]) != team2:
             scheduleTable[team1][tour], scheduleTable[team2][tour] = scheduleTable[team2][tour], scheduleTable[team1][
                 tour]
