@@ -60,7 +60,7 @@ def scheduleScore(scheduleTable, distanceTable):
 def scheduleByPermutation(P):
     scheduleTable = [[0] * N for _ in range(N + 1)]
     for tour in range(1, N):
-        Q = [0] + P[1] + P[tour + 1:] + P[2:tour + 1]
+        Q = [0] + [P[1]] + P[tour + 1:] + P[2:tour + 1]
         for team in range(1, N + 1):
             teamIndex = Q.index(team)
             if teamIndex == 1:
